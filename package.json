@@ -1,0 +1,63 @@
+{
+  "name": "ngx-credit-cards",
+  "version": "1.0.0",
+  "description": "A Credit Card Directives and Form Validators package for Angular X (2+)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenkkor/ngx-credit-cards.git"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "angular",
+    "2",
+    "angular.io",
+    "credit",
+    "cards",
+    "validation",
+    "directives",
+    "credit",
+    "card"
+  ],
+  "devDependencies": {
+    "@angular/animations": "^4.0.0-rc.3",
+    "@angular/common": "^4.0.0-rc.3",
+    "@angular/compiler": "^4.0.0-rc.3",
+    "@angular/core": "^4.0.0-rc.3",
+    "@angular/forms": "^4.0.0-rc.3",
+    "@angular/http": "^4.0.0-rc.3",
+    "@angular/platform-browser": "^4.0.0-rc.3",
+    "@angular/platform-browser-dynamic": "^4.0.0-rc.3",
+    "@angular/router": "^4.0.0-rc.3",
+    "@angular/tsc-wrapped": "^0.5.0 || >=4.0.0-beta <5.0.0",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "^6.0.42",
+    "codelyzer": "~2.0.0-beta.1",
+    "jasmine-core": "2.5.2",
+    "jasmine-spec-reporter": "2.5.0",
+    "karma": "1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-remap-istanbul": "^0.2.1",
+    "protractor": "~4.0.13",
+    "ts-node": "1.2.1",
+    "tslint": "^4.0.2",
+    "typescript": "~2.1.5",
+    "zone.js": "^0.7.2",
+    "rxjs": "^5.0.1"
+  },
+  "dependencies": {
+    "payment": "^2.2.1"
+  },
+  "author": "Rok Knez <rok@zenk.si> (http://zenk.si)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenkkor/ngx-credit-cards/issues"
+  },
+  "homepage": "https://github.com/zenkkor/ngx-credit-cards#readme"
+}
