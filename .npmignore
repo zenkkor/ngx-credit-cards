@@ -3,6 +3,7 @@ a# See http://help.github.com/ignore-files/ for more about ignoring files.
 # compiled output
 /dist
 /tmp
+/compiled
 
 # dependencies
 /node_modules
@@ -40,3 +41,8 @@ testem.log
 Thumbs.db
 
 *.pyc
+
+# or
+*.ngFactory.ts
+# or no change needed if you already have
+*.ts

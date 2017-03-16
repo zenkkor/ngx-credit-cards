@@ -3,6 +3,8 @@ A Credit Card Directives and Form Validators package for Angular X (2+).
 
 This is a wrapper around [Jesse Pollaks payment library](https://github.com/jessepollak/payment).
 
+This library is AOT compatible.  
+
 ---  
 # How to install?  
 
