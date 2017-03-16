@@ -8,6 +8,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noEmitHelpers": false,
+    "outDir": "build",
     "lib": [
       "es6",
       "dom"
