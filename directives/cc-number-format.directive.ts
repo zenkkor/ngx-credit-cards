@@ -1,18 +1,46 @@
 import { 
 	Directive, 
 	ElementRef, 
-	Input 
+	Renderer,
+	Input,
+	HostListener
 } from '@angular/core';
 
-@Directive({ selector: '[ccNum]' })
+import * as Payment from 'payment';
 
+@Directive({ 
+	selector: '[ccNum]' 
+})
 export class CCNumberFormatDirective {
 
-	constructor(el: ElementRef) {
-		console.log("yo");
+	cardType: string;
 
-		el.nativeElement.style.backgroundColor = 'yellow';
-	
+	constructor(private renderer: Renderer, private el: ElementRef) {
+
+		let element   = this.el.nativeElement;
+		this.cardType = "";
+
+    	// call lib functions
+		Payment.formatCardNumber(element);
+    	Payment.restrictNumeric(element);
+	}
+
+	@HostListener('keypress', ['$event']) onKeypress(e) {
+		
+		let element 	  = this.el.nativeElement;
+		let elementValue  = element.value;
+
+		this.cardType = Payment.fns.cardType(elementValue);
+
+		if ( this.cardType !== "" )
+		{	
+			this.renderer.setElementClass(element, this.cardType, false);
+		}
+		else
+		{
+			this.cardType = "";			
+		}
+
 	}
 
 }

@@ -4,12 +4,19 @@ import {
   Input 
 } from '@angular/core';
 
-@Directive({ selector: '[ccCvc]' })
+import * as Payment from 'payment';
 
+@Directive({ 
+	selector: '[ccCvc]' 
+})
 export class CCCvcFormatDirective {
   
-    constructor(el: ElementRef) {
-       el.nativeElement.style.backgroundColor = 'yellow';
+    constructor(private el: ElementRef) {
+    	let element = this.el.nativeElement;
+
+    	// call lib functions
+    	Payment.formatCardCVC(element);
+    	Payment.restrictNumeric(element);
     }
 
 }

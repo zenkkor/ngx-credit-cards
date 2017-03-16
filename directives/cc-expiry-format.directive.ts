@@ -4,12 +4,19 @@ import {
   Input 
 } from '@angular/core';
 
-@Directive({ selector: '[ccExp]' })
+import * as Payment from 'payment';
 
+@Directive({ 
+	selector: '[ccExp]' 
+})
 export class CCExpiryFormatDirective {
   
-    constructor(el: ElementRef) {
-       el.nativeElement.style.backgroundColor = 'yellow';
+    constructor(private el: ElementRef) {
+    	let element = this.el.nativeElement;
+
+    	// call lib functions
+    	Payment.formatCardExpiry(element);
+    	Payment.restrictNumeric(element);
     }
 
 }
