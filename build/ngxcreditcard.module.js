@@ -6,17 +6,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@angular/core");
-const cc_number_format_directive_1 = require("./directives/cc-number-format.directive");
-const cc_expiry_format_directive_1 = require("./directives/cc-expiry-format.directive");
-const cc_cvc_format_directive_1 = require("./directives/cc-cvc-format.directive");
-const CC_DIRECTIVES = [
+var core_1 = require("@angular/core");
+var cc_number_format_directive_1 = require("./directives/cc-number-format.directive");
+var cc_expiry_format_directive_1 = require("./directives/cc-expiry-format.directive");
+var cc_cvc_format_directive_1 = require("./directives/cc-cvc-format.directive");
+var CC_DIRECTIVES = [
     cc_number_format_directive_1.CCNumberFormatDirective,
     cc_expiry_format_directive_1.CCExpiryFormatDirective,
     cc_cvc_format_directive_1.CCCvcFormatDirective
 ];
-let NgXCreditCardsModule = class NgXCreditCardsModule {
-};
+var NgXCreditCardsModule = (function () {
+    function NgXCreditCardsModule() {
+    }
+    return NgXCreditCardsModule;
+}());
 NgXCreditCardsModule = __decorate([
     core_1.NgModule({
         declarations: [CC_DIRECTIVES],

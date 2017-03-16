@@ -1,14 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Payment = require("payment");
-class CreditCardValidator {
+var Payment = require("payment");
+var CreditCardValidator = (function () {
+    function CreditCardValidator() {
+    }
     /**
      * Validates a cc number
      * @param {FormControl} control
      */
-    static validateCardNumber(control) {
+    CreditCardValidator.validateCardNumber = function (control) {
         if (control) {
-            let isValid = Payment.fns.validateCardNumber(control.value);
+            var isValid = Payment.fns.validateCardNumber(control.value);
             if (!isValid) {
                 return {
                     "error": "CREDIT_CARD_INVALID"
@@ -16,20 +18,20 @@ class CreditCardValidator {
             }
         }
         return null;
-    }
+    };
     /**
      * Validates the expiry date.
      * Breaks exp by "/" string and assumes that first array entry is month and second year
      * Also removes any spaces
      * @param {FormControl} control [description]
      */
-    static validateCardExpiry(control) {
+    CreditCardValidator.validateCardExpiry = function (control) {
         if (control) {
-            let controlValue = control.value.split("/");
-            let isValid = false;
+            var controlValue = control.value.split("/");
+            var isValid = false;
             if (controlValue.length > 1) {
-                let month = controlValue[0].replace(/^\s+|\s+$/g, '');
-                let year = controlValue[1].replace(/^\s+|\s+$/g, '');
+                var month = controlValue[0].replace(/^\s+|\s+$/g, '');
+                var year = controlValue[1].replace(/^\s+|\s+$/g, '');
                 isValid = Payment.fns.validateCardExpiry(month, year);
             }
             if (!isValid) {
@@ -39,15 +41,15 @@ class CreditCardValidator {
             }
         }
         return null;
-    }
+    };
     /**
      * Validates cards CVC
      * Also removes any spaces
      * @param {FormControl} control [description]
      */
-    static validateCardCvc(control) {
+    CreditCardValidator.validateCardCvc = function (control) {
         if (control) {
-            let isValid = Payment.fns.validateCardCVC(control.value);
+            var isValid = Payment.fns.validateCardCVC(control.value);
             if (!isValid) {
                 return {
                     "error": "CREDIT_CARD_INVALID"
@@ -55,7 +57,8 @@ class CreditCardValidator {
             }
         }
         return null;
-    }
-}
+    };
+    return CreditCardValidator;
+}());
 exports.CreditCardValidator = CreditCardValidator;
 //# sourceMappingURL=CreditCard.validator.js.map

@@ -9,17 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@angular/core");
-const Payment = require("payment");
-let CCExpiryFormatDirective = class CCExpiryFormatDirective {
-    constructor(el) {
+var core_1 = require("@angular/core");
+var Payment = require("payment");
+var CCExpiryFormatDirective = (function () {
+    function CCExpiryFormatDirective(el) {
         this.el = el;
-        let element = this.el.nativeElement;
+        var element = this.el.nativeElement;
         // call lib functions
         Payment.formatCardExpiry(element);
         Payment.restrictNumeric(element);
     }
-};
+    return CCExpiryFormatDirective;
+}());
 CCExpiryFormatDirective = __decorate([
     core_1.Directive({
         selector: '[ccExp]'

@@ -9,21 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const core_1 = require("@angular/core");
-const Payment = require("payment");
-let CCNumberFormatDirective = class CCNumberFormatDirective {
-    constructor(renderer, el) {
+var core_1 = require("@angular/core");
+var Payment = require("payment");
+var CCNumberFormatDirective = (function () {
+    function CCNumberFormatDirective(renderer, el) {
         this.renderer = renderer;
         this.el = el;
-        let element = this.el.nativeElement;
+        var element = this.el.nativeElement;
         this.cardType = "";
         // call lib functions
         Payment.formatCardNumber(element);
         Payment.restrictNumeric(element);
     }
-    onKeypress(e) {
-        let element = this.el.nativeElement;
-        let elementValue = element.value;
+    CCNumberFormatDirective.prototype.onKeypress = function (e) {
+        var element = this.el.nativeElement;
+        var elementValue = element.value;
         this.cardType = Payment.fns.cardType(elementValue);
         if (this.cardType !== "") {
             this.renderer.setElementClass(element, this.cardType, false);
@@ -31,8 +31,9 @@ let CCNumberFormatDirective = class CCNumberFormatDirective {
         else {
             this.cardType = "";
         }
-    }
-};
+    };
+    return CCNumberFormatDirective;
+}());
 __decorate([
     core_1.HostListener('keypress', ['$event']),
     __metadata("design:type", Function),
