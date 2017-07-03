@@ -1,5 +1,5 @@
 # ngx-credit-cards
-A Credit Card Directives and Form Validators package for Angular X (2+).  
+A Credit Card Directives and Form Validators package for Angular X (4+).  
 
 This is a wrapper around [Jesse Pollaks payment library](https://github.com/jessepollak/payment).
 
