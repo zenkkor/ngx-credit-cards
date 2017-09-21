@@ -8,7 +8,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noEmitHelpers": false,
-    "outDir": "build",
+
     "lib": [
       "es6",
       "dom"
@@ -23,5 +23,10 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "genDir": "build",
+    "skipMetadataEmit": true,
+    "entryModule": "./ngxcreditcard.module#AppModule"
+  }
 }
