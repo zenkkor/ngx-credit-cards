@@ -5,7 +5,7 @@
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build && ngc -p ./",
+    "build": "rm -rf build && ngc -p ./tsconfig.json",
     "prepublish": "tsc"
   },
   "repository": {
