@@ -18,13 +18,13 @@ var CC_DIRECTIVES = [
 var NgXCreditCardsModule = (function () {
     function NgXCreditCardsModule() {
     }
+    NgXCreditCardsModule = __decorate([
+        core_1.NgModule({
+            declarations: [CC_DIRECTIVES],
+            exports: [CC_DIRECTIVES]
+        })
+    ], NgXCreditCardsModule);
     return NgXCreditCardsModule;
 }());
-NgXCreditCardsModule = __decorate([
-    core_1.NgModule({
-        declarations: [CC_DIRECTIVES],
-        exports: [CC_DIRECTIVES]
-    })
-], NgXCreditCardsModule);
 exports.NgXCreditCardsModule = NgXCreditCardsModule;
 //# sourceMappingURL=ngxcreditcard.module.js.map

@@ -32,19 +32,19 @@ var CCNumberFormatDirective = (function () {
             this.cardType = "";
         }
     };
+    __decorate([
+        core_1.HostListener('keypress', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
+    ], CCNumberFormatDirective.prototype, "onKeypress", null);
+    CCNumberFormatDirective = __decorate([
+        core_1.Directive({
+            selector: '[ccNum]'
+        }),
+        __metadata("design:paramtypes", [core_1.Renderer, core_1.ElementRef])
+    ], CCNumberFormatDirective);
     return CCNumberFormatDirective;
 }());
-__decorate([
-    core_1.HostListener('keypress', ['$event']),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", void 0)
-], CCNumberFormatDirective.prototype, "onKeypress", null);
-CCNumberFormatDirective = __decorate([
-    core_1.Directive({
-        selector: '[ccNum]'
-    }),
-    __metadata("design:paramtypes", [core_1.Renderer, core_1.ElementRef])
-], CCNumberFormatDirective);
 exports.CCNumberFormatDirective = CCNumberFormatDirective;
 //# sourceMappingURL=cc-number-format.directive.js.map

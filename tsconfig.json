@@ -25,7 +25,7 @@
     "node_modules"
   ],
   "angularCompilerOptions": {
-    "genDir": "build",
+    "genDir": "dist",
     "skipMetadataEmit": true,
     "entryModule": "./ngxcreditcard.module#AppModule"
   }

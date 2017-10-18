@@ -11,21 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var Payment = require("payment");
-var CCExpiryFormatDirective = (function () {
-    function CCExpiryFormatDirective(el) {
+var CCCvcFormatDirective = (function () {
+    function CCCvcFormatDirective(el) {
         this.el = el;
         var element = this.el.nativeElement;
         // call lib functions
-        Payment.formatCardExpiry(element);
+        Payment.formatCardCVC(element);
         Payment.restrictNumeric(element);
     }
-    return CCExpiryFormatDirective;
+    CCCvcFormatDirective = __decorate([
+        core_1.Directive({
+            selector: '[ccCvc]'
+        }),
+        __metadata("design:paramtypes", [core_1.ElementRef])
+    ], CCCvcFormatDirective);
+    return CCCvcFormatDirective;
 }());
-CCExpiryFormatDirective = __decorate([
-    core_1.Directive({
-        selector: '[ccExp]'
-    }),
-    __metadata("design:paramtypes", [core_1.ElementRef])
-], CCExpiryFormatDirective);
-exports.CCExpiryFormatDirective = CCExpiryFormatDirective;
-//# sourceMappingURL=cc-expiry-format.directive.js.map
+exports.CCCvcFormatDirective = CCCvcFormatDirective;
+//# sourceMappingURL=cc-cvc-format.directive.js.map
