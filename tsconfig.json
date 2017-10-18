@@ -8,7 +8,9 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noEmitHelpers": false,
-
+    "paths": {
+      "payment": [ "../node_modules/payment" ]
+    }
     "lib": [
       "es6",
       "dom"
@@ -20,9 +22,6 @@
   },
   "files": [
     "index.ts"
-  ],
-  "exclude": [
-    "node_modules"
   ],
   "angularCompilerOptions": {
     "genDir": "dist",

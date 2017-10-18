@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf build && ng build -p ./tsconfig.json",
-    "prepublish": "tsc --noStrictGenericChecks",
+    "prepublish": "tsc",
     "packagr": "ng-packagr -p ng-package.json"
   },
   "repository": {
