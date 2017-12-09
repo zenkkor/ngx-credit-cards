@@ -8,9 +8,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noEmitHelpers": false,
+    "baseUrl": "./",
     "paths": {
       "payment": [ "../node_modules/payment" ]
-    }
+    },
     "lib": [
       "es6",
       "dom"
