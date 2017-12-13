@@ -2,7 +2,6 @@ import {
 	Directive, 
 	ElementRef, 
 	Renderer,
-	Input,
 	HostListener
 } from '@angular/core';
 
@@ -21,8 +20,8 @@ export class CCNumberFormatDirective {
 		this.cardType = "";
 
     	// call lib functions
-		Payment.formatCardNumber(element);
-    	Payment.restrictNumeric(element);
+        Payment.fns.formatCardNumber(element);
+        Payment.fns.restrictNumeric(element);
 	}
 
 	@HostListener('keypress', ['$event']) onKeypress(e) {

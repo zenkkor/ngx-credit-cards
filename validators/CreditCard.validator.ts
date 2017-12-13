@@ -5,7 +5,7 @@ export class CreditCardValidator {
 
     /**
      * Validates a cc number
-     * @param {FormControl} control 
+     * @param control
      */
     static validateCardNumber(control: FormControl) {
 
@@ -28,7 +28,7 @@ export class CreditCardValidator {
      * Validates the expiry date.
      * Breaks exp by "/" string and assumes that first array entry is month and second year
      * Also removes any spaces 
-     * @param {FormControl} control [description]
+     * @param control
      */
     static validateCardExpiry(control: FormControl) {
 
@@ -59,7 +59,7 @@ export class CreditCardValidator {
     /**
      * Validates cards CVC
      * Also removes any spaces 
-     * @param {FormControl} control [description]
+     * @param control
      */
     static validateCardCvc(control: FormControl) {
 

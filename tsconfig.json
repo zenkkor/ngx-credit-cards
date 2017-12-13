@@ -10,7 +10,7 @@
     "noEmitHelpers": false,
     "baseUrl": "./",
     "paths": {
-      "payment": [ "../node_modules/payment" ]
+      "payment": [ "node_modules/payment" ]
     },
     "lib": [
       "es6",

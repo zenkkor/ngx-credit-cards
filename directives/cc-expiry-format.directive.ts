@@ -1,7 +1,6 @@
 import { 
   Directive, 
-  ElementRef, 
-  Input 
+  ElementRef
 } from '@angular/core';
 
 import * as Payment from 'payment';
@@ -15,8 +14,8 @@ export class CCExpiryFormatDirective {
     	let element = this.el.nativeElement;
 
     	// call lib functions
-    	Payment.formatCardExpiry(element);
-    	Payment.restrictNumeric(element);
+        Payment.fns.formatCardExpiry(element);
+        Payment.fns.restrictNumeric(element);
     }
 
 }

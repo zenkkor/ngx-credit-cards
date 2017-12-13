@@ -56,7 +56,7 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
-    "ng-packagr": "^1.5.0-rc.0",
+    "ng-packagr": "^2.0.0-rc.6",
     "protractor": "~4.0.13",
     "rxjs": "^5.0.1",
     "ts-node": "1.2.1",
@@ -65,7 +65,7 @@
     "zone.js": "^0.7.2"
   },
   "dependencies": {
-    "payment": "^2.2.1"
+    "payment": "^2.3.0"
   },
   "author": "Rok Knez <rok@zenk.si> (http://zenk.si)",
   "license": "MIT",
