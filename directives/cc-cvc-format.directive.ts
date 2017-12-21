@@ -1,7 +1,6 @@
 import { 
   Directive, 
-  ElementRef, 
-  Input 
+  ElementRef
 } from '@angular/core';
 
 import * as Payment from 'payment';
@@ -15,8 +14,8 @@ export class CCCvcFormatDirective {
     	let element = this.el.nativeElement;
 
     	// call lib functions
-    	Payment.formatCardCVC(element);
-    	Payment.restrictNumeric(element);
+        Payment.fns.formatCardCVC(element);
+        Payment.fns.restrictNumeric(element);
     }
 
 }

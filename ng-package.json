@@ -3,8 +3,7 @@
   "lib": {
     "entryFile": "index.ts",
     "externals": {
-        "payment/dist/payment.js": "payment",
-        "payment/lib/index.js": "payment"
+      "payment": "fns"
     }
   }
 }

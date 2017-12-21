@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build && ng build -p ./tsconfig.json",
+    "build": "rm -rf build && ngc build -p ./tsconfig.json",
     "prepublish": "tsc",
     "packagr": "ng-packagr -p ng-package.json"
   },
@@ -56,16 +56,16 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
-    "ng-packagr": "^1.5.0-rc.0",
+    "ng-packagr": "^2.0.0-rc.6",
     "protractor": "~4.0.13",
     "rxjs": "^5.0.1",
     "ts-node": "1.2.1",
     "tslint": "^4.0.2",
-    "typescript": "2.2.0",
+    "typescript": "2.6.2",
     "zone.js": "^0.7.2"
   },
   "dependencies": {
-    "payment": "^2.2.1"
+    "payment": "^2.3.0"
   },
   "author": "Rok Knez <rok@zenk.si> (http://zenk.si)",
   "license": "MIT",
