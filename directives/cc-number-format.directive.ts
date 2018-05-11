@@ -1,14 +1,14 @@
-import { 
-	Directive, 
-	ElementRef, 
+import {
+	Directive,
+	ElementRef,
 	Renderer,
 	HostListener
 } from '@angular/core';
 
 import * as Payment from 'payment';
 
-@Directive({ 
-	selector: '[ccNum]' 
+@Directive({
+	selector: '[ccNum]'
 })
 export class CCNumberFormatDirective {
 
@@ -20,24 +20,24 @@ export class CCNumberFormatDirective {
 		this.cardType = "";
 
     	// call lib functions
-        Payment.fns.formatCardNumber(element);
-        Payment.fns.restrictNumeric(element);
+        Payment.formatCardNumber(element);
+        Payment.restrictNumeric(element);
 	}
 
 	@HostListener('keypress', ['$event']) onKeypress(e) {
-		
+
 		let element 	  = this.el.nativeElement;
 		let elementValue  = element.value;
 
 		this.cardType = Payment.fns.cardType(elementValue);
 
 		if ( this.cardType !== "" )
-		{	
+		{
 			this.renderer.setElementClass(element, this.cardType, false);
 		}
 		else
 		{
-			this.cardType = "";			
+			this.cardType = "";
 		}
 
 	}
