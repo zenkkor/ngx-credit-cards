@@ -16,7 +16,7 @@ export class CreditCardValidator {
             if (!isValid)
             {
                 return {
-                    "error": "CREDIT_CARD_INVALID"
+                    cardNumber: true,
                 }
             }
         }     
@@ -48,7 +48,7 @@ export class CreditCardValidator {
             if (!isValid)
             {
                 return {
-                    "error": "CREDIT_EXPIRY_INVALID"
+                    cardExpiry: true,
                 }
             }
         }     
@@ -70,7 +70,7 @@ export class CreditCardValidator {
             if (!isValid)
             {
                 return {
-                    "error": "CREDIT_CARD_INVALID"
+                    cardCvc: true,
                 }
             }
         }     
